@@ -1,0 +1,52 @@
+resposta="S"
+while resposta=="S": #LOOP DE REPETIÇÂO
+
+    def soma(): #FUNÇÕES
+        a=float(input("Digite o primeiro valor: "))
+        b=float(input("Digite o segundo valor: "))
+        return a + b
+
+    def subtracao():
+        a=float(input("Digite o primeiro valor: "))
+        b=float(input("Digite o segundo valor: "))
+        return a - b
+
+    def multiplicacao():
+        a=float(input("Digite o primeiro valor: "))
+        b=float(input("Digite o segundo valor: "))
+        return a * b
+
+    def divisao():
+        a=float(input("Digite o primeiro valor: "))
+        b=float(input("Digite o segundo valor: "))
+        if b == 0:  # Verifica se o divisor é zero
+            print("Erro: Divisão por zero não é permitida.")
+            return None  # Retorna None para indicar falha
+        return a / b
+
+
+    calc=(input("Escolha uma forma de calcular(soma=1, subtração=2, multiplicação=3, divisão=4): ")) #CALCULADORA
+
+    if calc=="1":
+        resultado= soma()
+        print(f"Resultado = {resultado:.2f}")
+
+    elif calc=="2":
+        resultado = subtracao()
+        print(f"Resultado = {resultado:.2f}")
+
+    elif calc=="3":
+        resultado = multiplicacao()
+        print(f"Resultado = {resultado:.2f}")
+
+    elif calc=="4":
+        resultado = divisao()
+        print(f"Resultado = {resultado:.2f}")
+
+    else:
+        print("Erro. Por favor, digite um número válido (1,2,3 ou 4)")
+
+
+    resposta = input("Deseja continuar?(S/N): ").upper() #CONTINUAR LOOP
+
+print("Obrigado por calcular!")
